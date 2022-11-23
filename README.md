@@ -1,6 +1,8 @@
 # slidge-to-snikket
-getting snikket and slidge to play nice
-This outlines how I managed to get snikket and slidge working together in case anyone else needs to do this. I found the biggest difficulty being sparse snikket documentation. I do not claimt his is the right way to do this, I am just sharing how I got it to work to provide a hint for others treading the same sparsely document path I was on.
+Getting snikket and slidge to play nice
+This outlines how I managed to get snikket (https://snikket.org/) and slidge (website: https://sr.ht/~nicoco/slidge/sources  docs:https://slidge.readthedocs.io/en/latest/) working together in case anyone else needs to do this (if you want to talk to people on signal, telegram, mattermost, facebook messenger, discord, steam, hacker news, and/or skype all through your xmpp client then you probably need this). I found the biggest difficulty being sparse snikket documentation. I do not claim this is the right way to do this, I am just sharing how I got it to work to provide a hint for others treading the same sparsely document path I was on.
+
+This works because snikket has an undocumented/poorly documented feature where it will try to load any *.cfg.lua in /snikket/prosody in thier snikket_server container My prosody.cfg.lua file edited and put in the right spot loads the stuff you need to get telegram and facebook working on the snikket prosody side as far as configuration goes, as well as creates a spot you can put modules to be able to load modules the snikket guys didn't include (explicitely the privilege mod needed by slidge in this case).
 
 
 The general path is as follows:
